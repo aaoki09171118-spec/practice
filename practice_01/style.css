@@ -1,5 +1,16 @@
-ul{
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 24px 0;
+}    
+    ul{
     list-style: none;
+}
+header > div{
+    display: flex;
+    justify-content: space-between;
 }
 .nav > ul{
     display: flex ;
@@ -11,7 +22,7 @@ a{
     text-decoration: none;
 }
 .kv{
-    background-image: url(../img/クラシコムtop.jpg);
+    background-image: url(img/クラシコムtop.jpg);
     size: cover;
     height: 500px;
 }
@@ -62,8 +73,16 @@ a{
     flex-wrap: wrap;
 }
 .card-list li{
+    display: flex;
+    flex-direction: column;
     width: 33%;
     margin: auto;
+}
+.card-list li >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 .card-list img{
     width: 100%;
@@ -72,4 +91,31 @@ a{
 .card-list li > div {
     flex: 1;
 }
+.business-flex {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
 
+.business-flex > div:first-child {
+    /* テキスト部分 */
+    flex: 1 1 0;
+    /* 可能であれば最大幅を制限 */
+    max-width: 55%;
+}
+
+.business-flex > div:last-child {
+    /* 画像部分 */
+    flex: 1 1 0;
+    display: flex;
+    align-items: flex-start; /* 上寄せ */
+    justify-content: center; /* 中央寄せ（お好みで）*/
+    max-width: 45%;
+}
+
+.service {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    object-fit: cover;
+}
